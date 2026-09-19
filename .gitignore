@@ -1,0 +1,23 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables
+.env
+.env.*
+
+# SQLite databases
+*.db
+*.db-journal
+
+# Generated reports
+patients_report.pdf
+
+# OS files
+.DS_Store
+Thumbs.db
