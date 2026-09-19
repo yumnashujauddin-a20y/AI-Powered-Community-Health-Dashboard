@@ -36,3 +36,1162 @@
     transform: rotate(360deg);
   }
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f4f8fb;
+  color: #1e293b;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  height: 82px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: white;
+  border-bottom: 1px solid #e5eaf0;
+
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.logo-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #00bfa6,
+    #008f83
+  );
+
+  color: white;
+  font-size: 21px;
+
+  box-shadow: 0 7px 18px rgba(0, 191, 166, 0.25);
+}
+
+.logo h1 {
+  font-size: 19px;
+  font-weight: 800;
+  color: #0f766e;
+}
+
+.logo p {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 9px 14px;
+
+  background: #ecfdf5;
+  color: #047857;
+
+  border-radius: 30px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #10b981;
+  box-shadow: 0 0 0 4px #d1fae5;
+}
+
+/* ================= DASHBOARD ================= */
+
+.dashboard {
+  max-width: 1200px;
+  margin: auto;
+  padding: 38px 25px 50px;
+}
+
+/* ================= WELCOME ================= */
+
+.welcome {
+  padding: 30px 34px;
+
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: white;
+
+  background:
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(255,255,255,0.18),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #008f83,
+      #00bfa6
+    );
+
+  box-shadow: 0 15px 35px rgba(0, 143, 131, 0.2);
+}
+
+.small-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
+.welcome h2 {
+  font-size: 28px;
+  margin-bottom: 7px;
+}
+
+.welcome p:last-child {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.health-icon {
+  width: 82px;
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 22px;
+
+  background: rgba(255,255,255,0.15);
+
+  font-size: 40px;
+
+  backdrop-filter: blur(10px);
+}
+
+/* ================= STATISTICS ================= */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+
+  margin: 25px 0;
+}
+
+.stat-card {
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  background: white;
+
+  border: 1px solid #e8edf2;
+  border-radius: 16px;
+
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
+
+  transition: 0.25s;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.09);
+}
+
+.stat-icon {
+  width: 47px;
+  height: 47px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  font-size: 21px;
+}
+
+.stat-icon.blue {
+  background: #eff6ff;
+}
+
+.stat-icon.green {
+  background: #ecfdf5;
+}
+
+.stat-icon.purple {
+  background: #f5f3ff;
+}
+
+.stat-card p {
+  color: #64748b;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.stat-card h3 {
+  font-size: 22px;
+  color: #0f172a;
+}
+
+/* ================= CONTENT ================= */
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 24px;
+}
+
+.card {
+  background: white;
+
+  border: 1px solid #e5eaf0;
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+.card-header,
+.info-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-bottom: 28px;
+}
+
+.section-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #e6fffa;
+
+  font-size: 20px;
+}
+
+.purple-bg {
+  background: #f3e8ff;
+}
+
+.card h2 {
+  font-size: 19px;
+  color: #0f172a;
+}
+
+.card-header p,
+.info-header p {
+  color: #64748b;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* ================= FORM ================= */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #334155;
+}
+
+.form-group label span {
+  color: #ef4444;
+}
+
+.input-wrapper {
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 14px;
+
+  border: 1px solid #dbe3ea;
+
+  border-radius: 11px;
+
+  background: #f8fafc;
+
+  transition: 0.2s;
+}
+
+.input-wrapper > span {
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+.input-wrapper:focus-within {
+  background: white;
+
+  border-color: #00bfa6;
+
+  box-shadow:
+    0 0 0 4px rgba(0, 191, 166, 0.1);
+}
+
+.input-wrapper input,
+.input-wrapper select {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  color: #334155;
+}
+
+.input-wrapper input::placeholder {
+  color: #94a3b8;
+}
+
+.input-wrapper select {
+  cursor: pointer;
+}
+
+/* ================= BUTTON ================= */
+
+.save-button {
+  width: 100%;
+  height: 53px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #00bfa6,
+    #008f83
+  );
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  box-shadow: 0 9px 20px rgba(0, 191, 166, 0.25);
+
+  transition: 0.25s;
+}
+
+.save-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 13px 25px rgba(0, 191, 166, 0.32);
+}
+
+.save-button:active {
+  transform: translateY(0);
+}
+
+.save-button .arrow {
+  margin-left: auto;
+  margin-right: 16px;
+
+  font-size: 18px;
+}
+
+/* ================= MESSAGE ================= */
+
+.message {
+  margin-top: 15px;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  background: #ecfdf5;
+
+  color: #047857;
+
+  font-size: 13px;
+
+  text-align: center;
+}
+
+/* ================= AI CARD ================= */
+
+.ai-box {
+  display: flex;
+  gap: 13px;
+
+  padding: 18px;
+
+  margin-bottom: 25px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #f5f3ff,
+    #faf5ff
+  );
+
+  border: 1px solid #ede9fe;
+}
+
+.ai-circle {
+  min-width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: white;
+
+  border-radius: 50%;
+
+  font-size: 19px;
+}
+
+.ai-box h3 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.ai-box p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin: 16px 0;
+
+  color: #475569;
+
+  font-size: 13px;
+}
+
+.feature span {
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #dcfce7;
+  color: #16a34a;
+
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 20px 25px 30px;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .header {
+    padding: 0 20px;
+  }
+
+  .logo h1 {
+    font-size: 16px;
+  }
+
+  .status {
+    display: none;
+  }
+
+  .dashboard {
+    padding: 25px 15px;
+  }
+
+  .welcome {
+    padding: 25px;
+  }
+
+  .welcome h2 {
+    font-size: 23px;
+  }
+
+  .health-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  footer {
+    padding: 20px 15px;
+  }
+}
+
+
+/* =========================================================
+   AI DISEASE PREDICTION PAGE
+   ========================================================= */
+
+/* Main prediction page */
+
+.prediction-page {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   PAGE HERO
+   ========================================================= */
+
+.prediction-hero {
+  position: relative;
+
+  padding: 28px 32px;
+
+  margin-bottom: 24px;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  color: white;
+
+  background:
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(255,255,255,0.18),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #087f79,
+      #00bfa6
+    );
+
+  box-shadow:
+    0 15px 35px rgba(0, 143, 131, 0.18);
+}
+
+.prediction-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  right: -60px;
+  bottom: -90px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.08);
+}
+
+.prediction-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.prediction-hero .eyebrow {
+  margin-bottom: 7px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+
+  opacity: 0.8;
+}
+
+.prediction-hero h1 {
+  margin: 0;
+
+  font-size: 28px;
+
+  font-weight: 800;
+}
+
+.prediction-hero p {
+  margin-top: 7px;
+
+  font-size: 13px;
+
+  opacity: 0.9;
+}
+
+.prediction-robot {
+  position: absolute;
+
+  right: 35px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.16);
+
+  backdrop-filter: blur(10px);
+
+  font-size: 34px;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   PREDICTION CARD
+   ========================================================= */
+
+.prediction-card {
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5eaf0;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 8px 30px rgba(15, 23, 42, 0.06);
+}
+
+
+/* Card heading */
+
+.prediction-card-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 25px;
+}
+
+.prediction-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #f3e8ff;
+
+  font-size: 22px;
+}
+
+.prediction-card-header h2 {
+  margin: 0;
+
+  font-size: 19px;
+
+  color: #0f172a;
+}
+
+.prediction-card-header p {
+  margin-top: 4px;
+
+  font-size: 12px;
+
+  color: #64748b;
+}
+
+
+/* =========================================================
+   PATIENT SELECT
+   ========================================================= */
+
+.prediction-field {
+  margin-bottom: 21px;
+}
+
+.prediction-field label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #334155;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.prediction-field label span {
+  color: #ef4444;
+}
+
+.prediction-field select {
+  width: 100%;
+
+  height: 50px;
+
+  padding: 0 14px;
+
+  border: 1px solid #dbe3ea;
+
+  border-radius: 11px;
+
+  background: #f8fafc;
+
+  color: #334155;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+
+  appearance: none;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, #64748b 50%),
+    linear-gradient(135deg, #64748b 50%, transparent 50%);
+
+  background-position:
+    calc(100% - 18px) 21px,
+    calc(100% - 13px) 21px;
+
+  background-size:
+    5px 5px,
+    5px 5px;
+
+  background-repeat: no-repeat;
+}
+
+.prediction-field select:hover {
+  border-color: #00bfa6;
+
+  background-color: #ffffff;
+}
+
+.prediction-field select:focus {
+  border-color: #00bfa6;
+
+  background-color: white;
+
+  box-shadow:
+    0 0 0 4px rgba(0, 191, 166, 0.1);
+}
+
+
+/* =========================================================
+   SYMPTOMS
+   ========================================================= */
+
+.symptoms-title {
+  margin: 28px 0 14px;
+
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid #edf1f5;
+
+  color: #0f172a;
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+.symptoms-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 15px;
+}
+
+.symptom-card {
+  padding: 16px;
+
+  border: 1px solid #e5eaf0;
+
+  border-radius: 13px;
+
+  background: #f8fafc;
+
+  transition: all 0.2s ease;
+}
+
+.symptom-card:hover {
+  border-color: #b8ebe4;
+
+  background: #f0fdfa;
+
+  transform: translateY(-1px);
+}
+
+.symptom-card label {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 9px;
+
+  color: #334155;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.symptom-icon {
+  margin-right: 7px;
+
+  font-size: 16px;
+}
+
+.symptom-card select {
+  width: 100%;
+
+  height: 42px;
+
+  padding: 0 11px;
+
+  border: 1px solid #dbe3ea;
+
+  border-radius: 9px;
+
+  background: white;
+
+  color: #475569;
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+.symptom-card select:focus {
+  border-color: #00bfa6;
+
+  box-shadow:
+    0 0 0 3px rgba(0,191,166,0.08);
+}
+
+
+/* =========================================================
+   PREDICT BUTTON
+   ========================================================= */
+
+.predict-button {
+  width: 100%;
+
+  height: 55px;
+
+  margin-top: 25px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #00bfa6,
+      #008f83
+    );
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 9px 20px rgba(0,191,166,0.22);
+
+  transition: all 0.25s ease;
+}
+
+.predict-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 13px 26px rgba(0,191,166,0.30);
+}
+
+.predict-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   PREDICTION RESULT
+   ========================================================= */
+
+.prediction-result {
+  margin-top: 24px;
+
+  padding: 22px;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f0fdfa,
+      #ecfeff
+    );
+
+  border: 1px solid #b8ebe4;
+}
+
+.prediction-result-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 10px;
+
+  color: #0f766e;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+.prediction-result-value {
+  font-size: 22px;
+
+  font-weight: 800;
+
+  color: #0f172a;
+}
+
+.prediction-result-description {
+  margin-top: 5px;
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   AI INFORMATION BOX
+   ========================================================= */
+
+.ai-notice {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-top: 20px;
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  background: #faf5ff;
+
+  border: 1px solid #eadcff;
+}
+
+.ai-notice-icon {
+  width: 34px;
+  height: 34px;
+
+  min-width: 34px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #f3e8ff;
+
+  font-size: 17px;
+}
+
+.ai-notice strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #581c87;
+
+  font-size: 12px;
+}
+
+.ai-notice p {
+  margin: 0;
+
+  color: #7c3aed;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .prediction-card {
+    padding: 20px;
+  }
+
+  .prediction-hero {
+    padding: 25px;
+  }
+
+  .prediction-hero h1 {
+    font-size: 23px;
+  }
+
+  .prediction-robot {
+    display: none;
+  }
+
+  .symptoms-grid {
+    grid-template-columns: 1fr;
+  }
+}

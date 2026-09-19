@@ -1,24 +1,78 @@
-import logo from './logo.svg';
-import './App.css';
+// import React, { useState } from "react";
+// import Login from "./Login";
+// import Dashboard from "./Dashboard";
+// import PatientRegistration from "./PatientRegistration";
+// import Prediction from "./Prediction";
+
+// function App() {
+//   const [page, setPage] = useState("home");
+
+//   if (page === "login") {
+//     return <Login onBack={() => setPage("home")} />;
+//   }
+
+//   if (page === "patient") {
+//     return <PatientRegistration onBack={() => setPage("home")} />;
+//   }
+
+//   if (page === "prediction") {
+//     return <Prediction onBack={() => setPage("home")} />;
+//   }
+
+//   if (page === "dashboard") {
+//     return <Dashboard onBack={() => setPage("home")} />;
+//   }
+
+//   return (
+//     <div style={{ textAlign: "center", marginTop: "40px" }}>
+//       <h1>AI Powered Community Health Dashboard</h1>
+
+//       <button onClick={() => setPage("login")}>
+//         Login
+//       </button>
+
+//       <br /><br />
+
+//       <button onClick={() => setPage("patient")}>
+//         Patient Registration
+//       </button>
+
+//       <br /><br />
+
+//       <button onClick={() => setPage("prediction")}>
+//         Disease Prediction
+//       </button>
+
+//       <br /><br />
+
+//       <button onClick={() => setPage("dashboard")}>
+//         Dashboard
+//       </button>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import React, { useState } from "react";
+import Login from "./Login";
+import Dashboard from "./Dashboard";
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setLoggedIn(true);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {loggedIn ? (
+        <Dashboard />
+      ) : (
+        <Login onLogin={handleLogin} />
+      )}
+    </>
   );
 }
 
